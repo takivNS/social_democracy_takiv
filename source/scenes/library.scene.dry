@@ -342,16 +342,7 @@ data = [
         "legend": "CPT",
         "name": "CPT",
         "seats": Q.cpt_r*5,
-    }];
-if (Q.sapd_formed && Q.sapd_r) {
-    data.push({
-            "id": "sapd",
-            "legend": "SAPD",
-            "name": "SAPD",
-            "seats": Math.round(Q.sapd_r*5),
-            });
-}
-data = data.concat([
+    },
     {
         "id": "sdp",
         "legend": "SDP",
