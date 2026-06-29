@@ -54,7 +54,7 @@ is-deck: true
 
 @govt
 title: Government Affairs
-view-if: Q.sdp_in_government
+view-if: sdp_in_government
 card-image: img/reichstag_2.jpg
 is-deck: true
 
