@@ -320,7 +320,7 @@ Q.sapd_r = 0;
 Q.old_sapd_r = 0;
 
 // for changing the DDP's name to the DStP
-Q.ddp_name = "DDP";
+Q.ddp_name = "PR";
 
 // array of objects of the form {date: Date(), sdp: 10, cpt: 12, ...} for each election
 Q.election_records = [];
