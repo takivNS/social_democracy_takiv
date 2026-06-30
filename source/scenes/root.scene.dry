@@ -103,11 +103,10 @@ Q.moderate_plan_adopted = 0;
 // inter-party relations
 Q.lib_relation = 50;
 Q.cpt_relation = 25;
-Q.ddp_relation = 60;
-Q.dvp_relation = 35;
-// DNVP and NSDAP are invariably hostile
-Q.DNVP_relation = 10;
-Q.NSDAP_relation = 0;
+Q.pr_relation = 60;
+Q.fed_relation = 35;
+Q.und_relation = 10;
+Q.con_relation = 0;
 
 Q.cpt_leader = "Thälmann";
 // alternative is the Conciliators as party leader
@@ -115,7 +114,7 @@ Q.cpt_party_leader = "Thälmann";
 Q.lib_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
 Q.lib_party_leader = "Marx";
-Q.nsdap_leader = "Hitler";
+Q.con_leader = "Hitler";
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
@@ -230,9 +229,6 @@ Q.new_middle_qol = 100;
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
 Q.parties = ['sdp', 'cpt', 'lib', 'pr', 'fed', 'und', 'con', 'rp'];
 
-// TODO: add 'sapd' later on
-Q.sapd_formed = 0;
-
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_sdp = 60;
@@ -315,10 +311,6 @@ Q.old_und_r = 20;
 Q.old_con_r = 3;
 Q.old_rp_r = 9;
 
-// sapd isn't formed yet, but it may be formed
-Q.sapd_r = 0;
-Q.old_sapd_r = 0;
-
 // for changing the DDP's name to the DStP
 Q.ddp_name = "PR";
 
@@ -332,9 +324,9 @@ Q.economic_records = [];
 
 // State of the government
 Q.president = "Zanar";
-// starting chancellor: Wilhelm Marx
+Q.president_party = 'Ind.';
 Q.chancellor = "Anas";
-Q.chancellor_party = 'UND';
+Q.chancellor_party = 'Ind.';
 Q.sdp_in_government = 0;
 Q.lib_in_government = 1;
 Q.ddp_in_government = 0;
