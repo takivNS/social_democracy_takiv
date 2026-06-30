@@ -31,9 +31,9 @@ Internal dissent: [+ dissent_percent : dissent +]
 
 = Government
 
-President: [? if president_party == "Ind.": <span style="color: #808080;">[+ president +]</span> ?]
+President: [? if president_party == "Ind.": <span style="color: #808080;">[+ president +]</span> ?] [? if president_party == "SDP": <span style="color: #ff8181;">[+ president +]</span> ?] [? if president_party == "PR": <span style="color: #76ef68;">[+ president +]</span> ?] [? if president_party == "LIB": <span style="color: #ffd900;">[+ president +]</span> ?] [? if president_party == "FED": <span style="color: #248926;">[+ president +]</span> ?] [? if president_party == "UND": <span style="color: #a4c2f4;">[+ president +]</span> ?] [? if president_party == "CON": <span style="color: #3d85c6;">[+ president +]</span> ?]
 
-Chancellor: [? if chancellor_party == "Ind.": <span style="color: #808080;">[+ chancellor +]</span> ?]
+Chancellor: [? if chancellor_party == "Ind.": <span style="color: #808080;">[+ chancellor +]</span> ?] [? if chancellor_party == "SDP": <span style="color: #ff8181;">[+ chancellor +]</span> ?] [? if chancellor_party == "PR": <span style="color: #76ef68;">[+ chancellor +]</span> ?] [? if chancellor_party == "LIB": <span style="color: #ffd900;">[+ chancellor +]</span> ?] [? if chancellor_party == "FED": <span style="color: #248926;">[+ chancellor +]</span> ?] [? if chancellor_party == "UND": <span style="color: #a4c2f4;">[+ chancellor +]</span> ?] [? if chancellor_party == "CON": <span style="color: #3d85c6;">[+ chancellor +]</span> ?]
 
 Reichstag composition:
 
