@@ -14,6 +14,10 @@ if (Q.economic_growth) {
 }
 !}
 
+// constitution variables
+Q.legislature_type = "Unicameral";
+Q.amendment_type = "Double Majority";
+
 = Status
 
 [+ month : month +] [+ year +]
@@ -106,11 +110,25 @@ Economic growth: [+ economic_growth_2 +]%
 
 = The New Constitution
 
-# start as provisional, can be presidential, semi-parliamentary, or parliamentary
-Separation of Powers: [+ government_system +]
+# start as semi-presidential, can also be parliamentary or presidential
+System of Government: [+ government_system +]
 
 # start as unitary, can also be devolved or federal
 Centralization: [+ centralization_amount +]
+
+# legislature: unicameral / bicameral
+Legislature: [+ legislature_type +]
+
+[? if legislature_type == "Bicameral": Upper House: Senate ?]
+
+[? if legislature_type == "Bicameral": Lower House: National Assembly ?]
+
+#
+Amendment Procedure: [? if amendment_type == "Double Majority": <span class="tooltip-text" title="Amendments need the support of a majority of the legislature and a majority of voters in a referendum.">[+ amendment_type +]</span> ?]
+
+# what else
+# capital? 
+
 
 @paramilitaries
 on-arrival: {!
