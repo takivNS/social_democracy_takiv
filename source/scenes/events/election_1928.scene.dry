@@ -224,7 +224,7 @@ data = [
         "name": "CON",
         "seats": Q.con_r*5,
     },
-]);
+];
 
 if (window && d3) {
     var width = 500; 
