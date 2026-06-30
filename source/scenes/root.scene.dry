@@ -124,6 +124,8 @@ Q.hindenburg_enabled = 0;
 // constitution variables
 Q.centralization_amount = "Unitary";
 Q.government_system = "Provisional";
+Q.legislature_type = "Unicameral";
+Q.amendment_type = "Double Majority";
 
 
 // Does the SPD lead in Prussia?
