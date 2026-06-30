@@ -76,17 +76,17 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-{!<span class="tooltip-text" title="Center Party">Z</span>!}: [+ lib_relation : relationships +]
+{!<span class="tooltip-text" title="Liberal Party">LIB</span>!}: [+ lib_relation : relationships +]
 
-{!<span class="tooltip-text" title="German Democratic Party">!}[? if not ddp_name: PR?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ pr_relation : relationships +]
+{!<span class="tooltip-text" title="Progressive-Republican Party">!}[? if not ddp_name: PR?][? if ddp_name != 0 : [+ ddp_name +]?]{!</span>!}: [+ pr_relation : relationships +]
 
-{!<span class="tooltip-text" title="German People's Party">FED</span>!}: [+ fed_relation : relationships +]
+{!<span class="tooltip-text" title="Federalist Alliance">FED</span>!}: [+ fed_relation : relationships +]
 
-{!<span class="tooltip-text" title="Communist Party of Germany">CPT</span>!}: [+ cpt_relation : relationships +]
+{!<span class="tooltip-text" title="Communist Party of Takiv">CPT</span>!}: [+ cpt_relation : relationships +]
 
-{!<span class="tooltip-text" title="German National People's Party">UND</span>!}: [+ und_relation : relationships +]
+{!<span class="tooltip-text" title="Union for National Democracy">UND</span>!}: [+ und_relation : relationships +]
 
-{!<span class="tooltip-text" title="National-Socialist German Worker's Party (Nazis)">CON</span>!}: [+ con_relation : relationships +]
+{!<span class="tooltip-text" title="Conservative Party">CON</span>!}: [+ con_relation : relationships +]
 
 {!<span class="tooltip-text" title="Revjas Party">RP</span>!}: [+ rp_relation : relationships +]
 
@@ -102,6 +102,15 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
 
+@constitution
+
+= The New Constitution
+
+# start as provisional, can be presidential, semi-parliamentary, or parliamentary
+Separation of Powers: [+ government_system +]
+
+# start as unitary, can also be devolved or federal
+Centralization: [+ centralization_amount +]
 
 @paramilitaries
 on-arrival: {!
@@ -161,8 +170,6 @@ Q.socialism_disp = Math.round(Q.socialism);
 (if the election were to be held now):
 
 SDP: [+ sdp_votes +]%
-
-[? if sapd_formed: SAPD: [+ sapd_votes +]% ?]
 
 LIB: [+ lib_votes +]%
 
