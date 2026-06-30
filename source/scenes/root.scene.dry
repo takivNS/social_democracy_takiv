@@ -121,6 +121,10 @@ Q.hindenburg_relation = 25;
 // whether or not hindenburg can dismiss the government.
 Q.hindenburg_enabled = 0;
 
+// constitution variables
+Q.centralization_amount = "Unitary";
+Q.government_system = "Provisional";
+
 
 // Does the SPD lead in Prussia?
 Q.sdp_prussia = 1;
