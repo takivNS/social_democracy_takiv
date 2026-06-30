@@ -324,9 +324,9 @@ Q.economic_records = [];
 
 // State of the government
 Q.president = "Zanar";
-Q.president_party = 'Ind.';
+Q.president_party = "Ind.";
 Q.chancellor = "Anas";
-Q.chancellor_party = 'Ind.';
+Q.chancellor_party = "Ind.";
 Q.sdp_in_government = 0;
 Q.lib_in_government = 1;
 Q.ddp_in_government = 0;
