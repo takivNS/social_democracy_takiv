@@ -89,13 +89,13 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 
 
 // The largest party can only be the NSDAP or the SPD.
-Q.largest_party = 'SPD';
-if (Q.nsdap_r >= Q.spd_r && Q.nsdap_r >= Q.kpd_r) {
-    Q.largest_party = 'NSDAP';
+Q.largest_party = 'SDP';
+if (Q.con_r >= Q.sdp_r && Q.con_r >= Q.cpt_r) {
+    Q.largest_party = 'CON';
 }
 
-if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
-    Q.largest_party = 'KPD';
+if (Q.cpt_r >= Q.sdp_r && Q.cpt_r >= Q.con_r) {
+    Q.largest_party = 'CPT';
 }
 
 // coalitions
@@ -200,53 +200,53 @@ if (Q.sapd_formed && Q.sapd_r) {
             });
 }
 data = data.concat([
-    {
-        "id": "spd",
-        "legend": "SPD",
-        "name": "SPD",
-        "seats": Math.round(Q.spd_r*5),
+   {
+        "id": "cpt",
+        "legend": "CPT",
+        "name": "CPT",
+        "seats": Q.cpt_r*5,
     },
     {
-        "id": "ddp",
-        "legend": Q.ddp_name,
-        "name": Q.ddp_name,
-        "seats": Math.round(Q.ddp_r*5),
+        "id": "sdp",
+        "legend": "SDP",
+        "name": "SDP",
+        "seats": Q.sdp_r*5,
     },
     {
-        "id": "z",
-        "legend": "Center",
-        "name": "Center",
-        "seats": Math.round((Q.z_r - 3)*5),
+        "id": "pr",
+        "legend": "PR",
+        "name": "PR",
+        "seats": Q.pr_r*5,
     },
     {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
-        "seats": Math.round(3*5),
+        "id": "lib",
+        "legend": "LIB",
+        "name": "LIB",
+        "seats": Q.lib_r*5,
     },
     {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
-        "seats": Math.round(Q.dvp_r*5),
+        "id": "fed",
+        "legend": "FED",
+        "name": "FED",
+        "seats": Q.fed_r*5,
     },
     {
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Math.round(Q.other_r*5),
+        "id": "rp",
+        "legend": "RP",
+        "name": "RP",
+        "seats": Q.rp_r*5,
     },
     {
-        "id": "dnvp",
-        "legend": "DNVP",
-        "name": "DNVP",
-        "seats": Math.round(Q.dnvp_r*5),
+        "id": "und",
+        "legend": "UND",
+        "name": "UND",
+        "seats": Q.und_r*5,
     },
     {
-        "id": "nsdap",
-        "legend": "NSDAP",
-        "name": "NSDAP",
-        "seats": Math.round(Q.nsdap_r*5),
+        "id": "con",
+        "legend": "CON",
+        "name": "CON",
+        "seats": Q.con_r*5,
     },
 ]);
 
@@ -276,8 +276,6 @@ go-to: coalition_menu
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
 {!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
-
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
 
 {!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPD: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
 
