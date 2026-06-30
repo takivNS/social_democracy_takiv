@@ -14,10 +14,6 @@ if (Q.economic_growth) {
 }
 !}
 
-// constitution variables
-Q.legislature_type = "Unicameral";
-Q.amendment_type = "Double Majority";
-
 = Status
 
 [+ month : month +] [+ year +]
