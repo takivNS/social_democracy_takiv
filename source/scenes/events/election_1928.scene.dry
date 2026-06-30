@@ -99,7 +99,7 @@ if (Q.cpt_r >= Q.sdp_r && Q.cpt_r >= Q.con_r) {
 }
 
 // coalitions
-Q.weimar_coalition = Q.sdp_r + Q.pr_r + Q.lib_r - 3;
+Q.weimar_coalition = Q.sdp_r + Q.pr_r + Q.lib_r;
 Q.grand_coalition = Q.sdp_r + Q.pr_r + Q.lib_r + Q.fed_r;
 Q.bourgeois_coalition = Q.pr_r + Q.lib_r + Q.fed_r + Q.rp_r;
 Q.center_right_coalition = Q.lib_r + Q.pr_r + Q.fed_r + Q.rp_r + Q.und_r;
@@ -107,7 +107,7 @@ Q.right_coalition = Q.lib_r + Q.fed_r + Q.rp_r + Q.und_r;
 Q.far_right_coalition = Q.und_r + Q.con_r;
 Q.left_coalition = Q.sdp_r + Q.cpt_r + Q.sapd_r;
 // this is an absurd concept lol
-Q.popular_front_coalition = Q.sdp_r + Q.cpt_r + Q.lib_r + Q.pr_r - 3 + Q.sapd_r;
+Q.popular_front_coalition = Q.sdp_r + Q.cpt_r + Q.lib_r + Q.pr_r + Q.sapd_r;
 Q.anti_democratic_coalition = Q.cpt_r + Q.con_r + Q.und_r;
 // aka everyone except nazi, kpd, dnvp
 Q.neo_weimar_coalition = Q.sdp_r + Q.pr_r + Q.lib_r + Q.fed_r + Q.rp_r;
@@ -251,23 +251,21 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ sdp_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ff8181; outline: 2px; outline-style: solid;'> </div> !} **SDP:** {!</td><td>!} **[+ sdp_r +]%** {!</td><td>!} **[+ str_change_sdp +]** {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPD: {!</td><td>!} [+ cpt_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#9f2020'> </div> !}CPT: {!</td><td>!} [+ cpt_r +]% {!</td><td>!} [+ str_change_cpt +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ pr_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#76ef68'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ pr_r +]% {!</td><td>!} [+ str_change_pr +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ffd900'> </div> !} LIB: {!</td><td>!} [+ lib_r +]% {!</td><td>!} [+ str_change_lib +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} BVP: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ fed_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#248926'> </div> !} FED: {!</td><td>!} [+ fed_r +]% {!</td><td>!} [+ str_change_fed +] {!</td></tr>!}
  
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ rp_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#d17fd9'> </div> !} RP: {!</td><td>!} [+ rp_r +] % {!</td><td>!} [+ str_change_rp +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ und_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#a4c2f4'> </div> !} UND: {!</td><td>!} [+ und_r +]% {!</td><td>!} [+ str_change_und +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ con_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#3d85c6'> </div> !} CON: {!</td><td>!} [+ con_r +]% {!</td><td>!} [+ str_change_con +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
