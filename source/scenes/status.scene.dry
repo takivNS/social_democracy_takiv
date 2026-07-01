@@ -107,13 +107,13 @@ Economic growth: [+ economic_growth_2 +]%
 = The New Constitution
 
 # start as semi-presidential, can also be parliamentary or presidential
-System of Government: [+ government_system +]
+System of Government: [[? if amendment_type == "Double Majority": <span class="tooltip-text" title="Power is divided between the President, the Premier, and the legislature. The National Assembly may remove the Premier with a confidence vote.">[+ government_system +]</span> ?]
 
 # start as unitary, can also be devolved or federal
-Centralization: [+ centralization_amount +]
+Centralization: [? if centralization_amount == "Unitary": <span class="tooltip-text" title="Power is concentrated in the central government. The provinces have little independent power.">[+ centralization_amount +]</span> ?]
 
 # legislature: unicameral / bicameral
-Legislature: [+ legislature_type +]
+Legislature: [? if legislature_type == "Unicameral": <span class="tooltip-text" title="All legislative powers are held by the National Assembly. It is the only body that can create legislation.">[+ legislature_type +]</span> ?]
 
 [? if legislature_type == "Bicameral": Upper House: Senate ?]
 
