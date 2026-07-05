@@ -5,12 +5,12 @@ go-to: menu
 
 = The Library
 
-Herein contains relevant information about the government and politics of the German republic.
+Herein contains relevant information about the government and politics of the Takivaj republic.
 
 @menu
 
-- @government: Germany's system of government
-- @weimar_timeline: Timeline of the Weimar Republic before 1928
+- @government: Takiv's system of government
+- @weimar_timeline: Timeline of Takiv before 1948.
 - @curr_gov: Current government details
 - @demographics: Demographics
 - @parties: Parties
@@ -23,9 +23,9 @@ Herein contains relevant information about the government and politics of the Ge
 @government
 go-to: menu
 
-The German Republic, called by some of our detractors as the "Weimar Republic", is a parliamentary republic with a somewhat weak president and a strong parliament, called the Reichstag. The Reichstag is responsible for governing, while the President has a largely ceremonial role but also has some important governing responsibilities.
+The Takivaj Republic is a semi-presidential republic with a somewhat strong president and a strong parliament, called the National Assembly. The Assembly is responsible for passing laws, while the President has significant foreign policy powers and influence over the Cabinet.
 
-The Reichstag is elected based on a proportional representation system, giving parties seats roughly proportional to their vote share in each electoral district. The Reichstag then elects the Chancellor and the cabinet by a majority vote, who are responsible for government. A majority vote-of-no-confidence can remove the current government.
+The National Assembly is elected based on a proportional representation system, giving parties seats roughly proportional to their national vote share. The Assembly has the power to remove the 
 
 The President is elected by a national direct vote, in two rounds. The second round is used if the first round does not result in a majority for one candidate; the candidate who receives a plurality in the second round becomes president (there is no obligation for weaker candidates to drop out). The role of the president is mostly to represent Germany, but he also has some crucial governing powers. The president and chancellor can together use emergency decrees to govern, bypassing the Reichstag. The president can also appoint or remove a chancellor when a parliamentary majority is unable to be established, and can thus influence the formation of a government.
 
@@ -73,21 +73,20 @@ Reichstag composition:
 
 # 1928: 30, 1930: 25, 1932: 22
 SDP: [+ sdp_r +]%
-[? if sapd_formed and sapd_r > 0: SAPD: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
-Z + BVP: [+ z_r +]%
+Z + BVP: [+ lib_r +]%
 # 1928: 10, 1930: 13
-CPT: [+ kpd_r +]%
+CPT: [+ cpt_r +]%
 # 1928: 5, 1930: 4 (as DstP)
-[+ ddp_name +]: [+ ddp_r +]%
+[+ ddp_name +]: [+ pr_r +]%
 # 1928: 9, 1930: 5
-FED: [+ dvp_r +]%
+FED: [+ fed_r +]%
 # 1928: 14, 1930: 7
-UND: [+ dnvp_r +]%
+UND: [+ und_r +]%
 # 1928: 3, 1930: 18
-CON: [+ nsdap_r +]%
+CON: [+ con_r +]%
 # 1928: 9, 1930: 10
-RP: [+ other_r +]%
+RP: [+ rp_r +]%
 
 SDP position: [? if sdp_toleration : toleration ?][? if sdp_in_government : in government - ?][? if sdp_toleration == 0 and sdp_in_government == 0 and sdp_caretaker == 0 : opposition ?][? if sdp_caretaker : caretaker government ?]
 [? if in_weimar_coalition and sdp_in_government: Weimar Coalition ?][? if in_grand_coalition and sdp_in_government: Grand Coalition ?][? if in_popular_front and sdp_in_government: Popular Front ?][? if in_left_front and sdp_in_government: Left Front ?][? if in_sdp_majority and sdp_in_government: SDP majority ?][? if in_minority_government and sdp_in_government: minority government ?][? if in_emergency_government and sdp_in_government: emergency government ?]
