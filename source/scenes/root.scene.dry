@@ -26,6 +26,8 @@ Q.month = 1;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
+Q.disable_difficulties = 1;
+
 // 0 = normal difficulty, 1 = hard mode, 2 = hard mode no saves
 Q.difficulty = 0;
 Q.historical_mode = 0;
@@ -124,12 +126,6 @@ Q.government_system = "Semi-Presidential";
 Q.legislature_type = "Unicameral";
 Q.amendment_type = "Double Majority";
 
-
-// Does the SPD lead in Prussia?
-Q.sdp_prussia = 1;
-// Options: sdp, z, dnvp, papen, nsdap
-Q.prussian_government = "SDP";
-
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
 // Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
@@ -153,10 +149,6 @@ Q.rfb_banned_prussia = 0;
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
 Q.interior_police_loyalty = 0.45;
-
-Q.prussian_police_strength = 90;
-Q.prussian_police_militancy = 1;
-Q.prussian_police_loyalty = 0.5;
 
 // strength includes actual military and de facto reserves?
 Q.reichswehr_strength = 100;
@@ -187,7 +179,7 @@ Q.presidential_powers = 0;
 // allows banning of non-constitutional parties
 Q.constitutional_protection = 0;
 Q.cpt_banned = 0;
-Q.nsdap_banned = 0;
+Q.con_banned = 0;
 
 // coups and capital strikes happen when you upset the right or the capitalists too much with your policies. they're an additional check on your policies, when purely electoral checks don't suffice.
 // when coup_progress reaches 10 or capital_strike_progress reaches 10, there's a special event that launches the coup.
@@ -199,12 +191,10 @@ Q.budget = 4;
 // Proportion of different social groups
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 45, table 3.4 - using 1925 figures
 Q.workers = 48; // industry and trade
-Q.old_middle = 13; // "old mittelstand"
-// 16.4 trade & commerce, 6.6 public and private services, 4.4 domestic help
-Q.new_middle = 14; // "new mittelstand"
+Q.new_middle = 27; // "new mittelstand"
 Q.rural = 25; // agriculture and forestry employment... but many of those are proletarians so...
 // source: https://surface.syr.edu/cgi/viewcontent.cgi?filename=3&article=1016&context=books&type=additional page 43, table 3.3
-Q.unemployed = 8.6;
+Q.unemployed = 22.6;
 Q.catholics = 30;
 
 // unemployment: 1929 - 13.3, 1930 - 22.7, 1931 - 34.3, 1932 - 43.8 (same source as above)
@@ -217,7 +207,7 @@ Q.income = 1600;
 Q.inflation = 2.9;
 
 // economic growth - same source as above, Table 2 (preisbereinigt) - this is also the source for the yearly changes in the great depression.
-Q.economic_growth = 4.4;
+Q.economic_growth = 0.23;
 
 // economic expansion timer
 Q.economic_expansion = 0;
@@ -229,7 +219,7 @@ Q.unemployed_qol = 100;
 Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
-Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
+Q.classes = ['workers', 'new_middle', 'rural', 'unemployed', 'catholics'];
 Q.parties = ['sdp', 'cpt', 'lib', 'pr', 'fed', 'und', 'con', 'rp'];
 
 // Support for party by social group
@@ -242,15 +232,6 @@ Q.workers_fed = 0;
 Q.workers_und = 5;
 Q.workers_con = 0;
 Q.workers_rp = 10;
-
-Q.old_middle_sdp = 5;
-Q.old_middle_cpt = 0;
-Q.old_middle_lib = 5;
-Q.old_middle_pr= 10;
-Q.old_middle_fed = 25;
-Q.old_middle_und = 25;
-Q.old_middle_con = 10;
-Q.old_middle_rp = 10;
 
 Q.new_middle_sdp = 5;
 Q.new_middle_cpt = 1;
@@ -590,10 +571,14 @@ For more information on the political and historical context of Takiv, press the
 
 @1928_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; cpt_relation = 29; lib_relation = 54; fed_relation = 49; budget = 5;
+unavailable_subtitle: Difficulties other than normal are disabled for now.
+choose-if: Q.disable_difficulties = 0;
 go-to: 1928_main
 
 @1928_hard
 on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; lib_relation = 41; cpt_relation = 16; fed_relation = 31; budget = 3;
+unavailable_subtitle: Difficulties other than normal are disabled for now.
+choose-if: Q.disable_difficulties = 0;
 go-to: 1928_main
 
 @1928_historical
@@ -617,6 +602,8 @@ Q.rp_relation = 16;
 Q.budget = 2;
 this.state.disableSaves = true;
 !}
+unavailable_subtitle: Difficulties other than normal are disabled for now.
+choose-if: Q.disable_difficulties = 0;
 go-to: 1928_main
 
 @1928_main
