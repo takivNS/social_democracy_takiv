@@ -108,8 +108,6 @@ go-to: menu
 
 **Working Class**: The urban working class - blue-collar workers in factories, workshops, mines, and the like. Most are socialist, supporting either the SDP or CPT. They make up 40-50% of the population.
 
-**Old Mittelstand**: The old middle class consists of independent artisans, shopkeepers, and small-time businesspeople. They tend to be conservative and are the strongest base for the far right. 10-15% of the population.
-
 **New Mittelstand**: The new middle class consists of white-collar workers and government employees. This is the base of liberalism. 10-15% of the population.
 
 **Rural**: Small and large farmers and independent rural workers. Protestant farmers often support the UND. 20-30% of the population.
@@ -175,8 +173,6 @@ RP: [+ rp_votes +]%
 Workers: SDP: [+ workers_sdp_display +]%, LIB: [+ workers_lib_display +]%, CPT: [+ workers_kpd_display +]%, [+ ddp_name +]: [+ workers_ddp_display +]%, FED: [+ workers_dvp_display +]%; UND: [+ workers_dnvp_display +]%, CON: [+ workers_nsdap_display +]%, RP: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
 New Middle Class: SDP: [+ new_middle_sdp_display +]%, LIB: [+ new_middle_lib_display +]%, CPT: [+ new_middle_kpd_display +]%, [+ ddp_name +]: [+ new_middle_ddp_display +]%, FED: [+ new_middle_dvp_display +]%; UND: [+ new_middle_dnvp_display +]%, CON: [+ new_middle_nsdap_display +]%, RP: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
-
-Old Middle Class: SDP: [+ old_middle_sdp_display +]%, LIB: [+ old_middle_lib_display +]%, CPT: [+ old_middle_kpd_display +]%, [+ ddp_name +]: [+ old_middle_ddp_display +]%, FED: [+ old_middle_dvp_display +]%; UND: [+ old_middle_dnvp_display +]%, CON: [+ old_middle_nsdap_display +]%, RP: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
 Rural: SDP: [+ rural_sdp_display +]%, LIB: [+ rural_lib_display +]%, CPT: [+ rural_kpd_display +]%, [+ ddp_name +]: [+ rural_ddp_display +]%, FED: [+ rural_dvp_display +]%; UND: [+ rural_dnvp_display +]%, CON: [+ rural_nsdap_display +]%, RP: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
