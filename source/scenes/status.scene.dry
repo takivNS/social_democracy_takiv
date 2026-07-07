@@ -206,8 +206,6 @@ Workers: SDP: [+ workers_sdp_display +]%, LIB: [+ workers_lib_display +]%, CPT: 
 
 New Middle Class: SDP: [+ new_middle_sdp_display +]%, Z: [+ new_middle_z_display +]%, CPT: [+ new_middle_cpt_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ new_middle_ddp_display +]%, FED: [+ new_middle_fed_display +]%; UND: [+ new_middle_und_display +]%, CON: [+ new_middle_con_display +]%, RP: [+ new_middle_rp_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: SDP: [+ old_middle_sdp_display +]%, Z: [+ old_middle_z_display +]%, CPT: [+ old_middle_cpt_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ old_middle_ddp_display +]%, FED: [+ old_middle_fed_display +]%; UND: [+ old_middle_und_display +]%, CON: [+ old_middle_con_display +]%, RP: [+ old_middle_rp_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
-
 Rural: SDP: [+ rural_sdp_display +]%, Z: [+ rural_z_display +]%, CPT: [+ rural_cpt_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ rural_ddp_display +]%, FED: [+ rural_fed_display +]%; UND: [+ rural_und_display +]%, CON: [+ rural_con_display +]%, RP: [+ rural_rp_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
 Unemployed: SDP: [+ unemployed_sdp_display +]%, Z: [+ unemployed_z_display +]%, CPT: [+ unemployed_cpt_display +]%, [? if not ddp_name: DDP?][? if ddp_name != 0 : [+ ddp_name +]?]: [+ unemployed_ddp_display +]%, FED: [+ unemployed_fed_display +]%; UND: [+ unemployed_und_display +]%, CON: [+ unemployed_con_display +]%, RP: [+ unemployed_rp_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
