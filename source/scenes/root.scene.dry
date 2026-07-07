@@ -216,7 +216,6 @@ Q.economic_expansion = 0;
 Q.workers_qol = 100;
 Q.rural_qol = 100;
 Q.unemployed_qol = 100;
-Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'new_middle', 'rural', 'unemployed', 'catholics'];
