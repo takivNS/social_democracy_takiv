@@ -29,6 +29,8 @@ SDP position: [? if sdp_toleration : toleration ?][? if sdp_in_government : in g
 
 Internal dissent: [+ dissent_percent : dissent +]
 
+[? if sdp_in_government and president_party != "SDP" : Presidential relations: [+ president_relations : prezrelations +] ?]
+
 = Government
 
 President: [? if president_party == "Ind.": <span style="color: #808080;"> ?][? if president_party == "SDP": <span style="color: #ff8181;"> ?][+ president +]</span>
