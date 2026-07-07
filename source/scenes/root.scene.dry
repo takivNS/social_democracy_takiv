@@ -572,13 +572,13 @@ For more information on the political and historical context of Takiv, press the
 @1928_easy
 on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; cpt_relation = 29; lib_relation = 54; fed_relation = 49; budget = 5;
 unavailable_subtitle: Difficulties other than normal are disabled for now.
-choose-if: Q.disable_difficulties = 0;
+choose-if: disable_difficulties = 0
 go-to: 1928_main
 
 @1928_hard
 on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; lib_relation = 41; cpt_relation = 16; fed_relation = 31; budget = 3;
 unavailable_subtitle: Difficulties other than normal are disabled for now.
-choose-if: Q.disable_difficulties = 0;
+choose-if: disable_difficulties = 0
 go-to: 1928_main
 
 @1928_historical
@@ -603,7 +603,7 @@ Q.budget = 2;
 this.state.disableSaves = true;
 !}
 unavailable_subtitle: Difficulties other than normal are disabled for now.
-choose-if: Q.disable_difficulties = 0;
+choose-if: disable_difficulties = 0
 go-to: 1928_main
 
 @1928_main
